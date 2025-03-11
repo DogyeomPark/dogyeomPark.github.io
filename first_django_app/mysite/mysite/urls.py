@@ -15,10 +15,22 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.conf.urls. import include, url
+# from django.conf.urls import include, url
+# from django.contrib import admin
+
+# urlpatterns = [
+#     path(r'^polls/', include('polls.urls')),
+#     path(r'^admin/', admin.site.urls),
+# ]
+
+# Django 4.0에서 django.conf.urls.url() 함수는 제거되었습니다.
+# 대신 django.urls.re_path() 함수를 사용하십시오. 정규표현식 기반 URL 패턴임
+# 혹은, path() 함수를 사용하십시오. 경로 기반 URL 패턴임
+from django.urls import include, path
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^polls/', include('polls.urls')),
-    url(r'^admin/', admin.site.urls),
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
 ]
+
