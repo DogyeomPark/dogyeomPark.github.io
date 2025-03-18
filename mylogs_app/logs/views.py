@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .models improt UserProfile
+from .models import UserProfile
 
 @login_required
 def profile_view(request):
