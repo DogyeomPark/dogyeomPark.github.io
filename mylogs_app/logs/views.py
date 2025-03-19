@@ -24,3 +24,7 @@ def profile_edit(request):
     
     return render(request, 'logs/profile_edit.html',
 {'profile': request.user.profile})
+
+
+def main_view(request):
+    return render(request, 'logs/main.html')
