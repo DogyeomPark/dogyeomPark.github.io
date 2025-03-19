@@ -1,7 +1,12 @@
 from django.contrib import admin
-from .models import DailySummary, Mood, Medication, Gratitude
+from django.contrib.auth.models import User
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-admin.site.register(DailySummary)
-admin.site.register(Mood)
-admin.site.register(Medication)
-admin.site.register(Gratitude)
+# @admin.site.register(User, UserAdmin)
+# class UserAdmin(admin.ModelAdmin):
+#     list_display = ('first_name', 'last_name', 'email', 'is_active', 'is_staff', 'is_superuser')
+#     search_fields = ('first_name', 'last_name', 'email')
+
+class CustomUserAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'email', 'is_active', 'is_staff', 'is_superuser')
+    search_fields = ('first_name', 'last_name', 'email')

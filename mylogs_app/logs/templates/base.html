@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MyLogs{% endblock %}</title>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- 예시 CSS -->
+</head>
+<body>
+    <header>
+        <h1>MyLogs App</h1>
+        <nav>
+            <a href="/profile/">Profile</a>
+            <a href="/profile/edit/">Edit Profile</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MyLogs App</p>
+    </footer>
+</body>
+</html>
